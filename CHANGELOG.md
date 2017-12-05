@@ -1,16 +1,43 @@
-## 1.3.2 (Unreleased)
+## 1.6.0 (Unreleased)
 
-BUG FIXES:
+FEATURES:
 
-* resource/aws_cognito_user_pool: Fix `email_subject_by_link` [GH-2395]
-* resource/aws_api_gateway_method_response: Fix conflict exception in API gateway method response [GH-2393]
+* **New Datasource:** `aws_network_interface` [GH-2316]
+* **New Resource:** `aws_dx_connection_association` [GH-2360]
+* **New Resource:** `aws_appautoscaling_scheduled_action` [GH-2231]
 
 IMPROVEMENTS:
 
-* data-source/aws_nat_gateway: Add missing address attributes to the schema [GH-2209]
-* resource/aws_ssm_maintenance_window_target: Change MaxItems of targets [GH-2361]
-* resource/aws_sfn_state_machine: Support Update State machine call [GH-2349]
-* resource/aws_instance: Set placement_group in state on read if available [GH-2398]
+* resource/aws_ssm_association: Add `association_name` [GH-2257]
+* resource/aws_ecs_service: Add `network_configuration` [GH-2299]
+* resource/aws_lambda_function: Add `reserved_concurrent_executions` [GH-2504]
+
+BUG FIXES:
+
+* resource/aws_elasticache_parameter_group: Add StateFunc to make name lowercase [GH-2426]
+* resource/aws_elasticache_replication_group: Modify validation, make replication_group_id lowercase [GH-2432]
+
+## 1.5.0 (November 29, 2017)
+
+FEATURES:
+
+* **New Resource:** `aws_mq_broker` ([#2466](https://github.com/terraform-providers/terraform-provider-aws/issues/2466))
+* **New Resource:** `aws_mq_configuration` ([#2466](https://github.com/terraform-providers/terraform-provider-aws/issues/2466))
+
+## 1.4.0 (November 29, 2017)
+
+BUG FIXES:
+
+* resource/aws_cognito_user_pool: Fix `email_subject_by_link` ([#2395](https://github.com/terraform-providers/terraform-provider-aws/issues/2395))
+* resource/aws_api_gateway_method_response: Fix conflict exception in API gateway method response ([#2393](https://github.com/terraform-providers/terraform-provider-aws/issues/2393))
+* resource/aws_api_gateway_method: Fix typo `authorization_type` -> `authorization` ([#2430](https://github.com/terraform-providers/terraform-provider-aws/issues/2430))
+
+IMPROVEMENTS:
+
+* data-source/aws_nat_gateway: Add missing address attributes to the schema ([#2209](https://github.com/terraform-providers/terraform-provider-aws/issues/2209))
+* resource/aws_ssm_maintenance_window_target: Change MaxItems of targets ([#2361](https://github.com/terraform-providers/terraform-provider-aws/issues/2361))
+* resource/aws_sfn_state_machine: Support Update State machine call ([#2349](https://github.com/terraform-providers/terraform-provider-aws/issues/2349))
+* resource/aws_instance: Set placement_group in state on read if available ([#2398](https://github.com/terraform-providers/terraform-provider-aws/issues/2398))
 
 ## 1.3.1 (November 20, 2017)
 
